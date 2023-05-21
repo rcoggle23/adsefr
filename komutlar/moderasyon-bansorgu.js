@@ -10,7 +10,7 @@ exports.run = (client, message, args) => {
     message.guild.fetchBans()
         .then(bans => {
             if (!bans.has(kullanici)) {
-                return message.channel.send(`<:a_:821738957997211659>  **Bu kullanıcı banlanmamış.**`)
+                return message.channel.send(`<:a_:>  **Bu kullanıcı banlanmamış.**`)
             }
         })
     message.guild.fetchBan(kullanici).then(({ user, reason }) => {
