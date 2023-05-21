@@ -7,11 +7,11 @@ exports.run = async(client, message, args) => {
 
   let prefix = await require('quick.db').fetch(`prefix.${message.guild.id}`) || ayarlar.prefix
 
-  if (!message.member.permissions.has('ADMINISTRATOR')) return message.channel.send(`<:a_:821738957997211659>  **Hey Sen** Evet Sen! Bu Komut İçin Yeterli Yetkin Yok!`)
+  if (!message.member.permissions.has('ADMINISTRATOR')) return message.channel.send(`<:a_:1109871616105664574>  **Hey Sen** Evet Sen! Bu Komut İçin Yeterli Yetkin Yok!`)
 if (!args[0])  {
     const küfürcu0k = new Discord.MessageEmbed()
     .setTitle('Başarısız')
-    .setDescription(`<:a_:821738957997211659>  Bunumu Arıyorsun? \n ${prefix}küfür-engel aç/kapat`)
+    .setDescription(`<:a_:1109871616105664574>  Bunumu Arıyorsun? \n ${prefix}küfür-engel aç/kapat`)
       return message.channel.send(küfürcu0k)
 
   }   
