@@ -37,13 +37,13 @@ const onerili = new Discord.MessageEmbed()
  
       .setColor("RANDOM")
  
-      .setAuthor("<:a_:821738957997211659>  Yeni Bir Öneri!", client.user.avatarURL())
+      .setAuthor("<:a_:1109866752428490974>  Yeni Bir Öneri!", client.user.avatarURL())
  
-      .addField("<:a_:821738957997211659>  • Öneren Kullanıcı:", message.author.tag, true)
+      .addField("<:a_:1109866752428490974>  • Öneren Kullanıcı:", message.author.tag, true)
  
-      .addField("<:a_:821738957997211659>  • Öneren Kullanıcı ID:", message.author.id,true)
+      .addField("<:a_:1109866752428490974>  • Öneren Kullanıcı ID:", message.author.id,true)
  
-      .addField("<:a_:821738957997211659>  • Önerisi:", öneri)
+      .addField("<:a_:1109866752428490974>  • Önerisi:", öneri)
     
       .setThumbnail(message.author.avatarURL());
  
