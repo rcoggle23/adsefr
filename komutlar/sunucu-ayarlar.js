@@ -6,7 +6,7 @@ let p = await db.fetch(`prefix.${message.guild.id}`) || ayarlar.prefix
 if (!message.guild) return;
 
 
-const sayfa = [`**${message.guild.name} | Sunucu Ayarları**\n**Botun Prefixi :** \${p}\n**Reklam Engel:** ${db.fetch(`reklamengel_${message.guild.id}`) ? ` **AÇIK** ` : ` **KAPALI** ` }\n**Küfür Engel:** ${db.fetch(`kufurE_${message.guild.id}`) ? ` **AÇIK** ` : ` **KAPALI** ` }`] 
+const sayfa = [`**${message.guild.name} | Sunucu Ayarları**\n**Botun Prefixi :** \'${p}'\n**Reklam Engel:** ${db.fetch(`reklamengel_${message.guild.id}`) ? ` **AÇIK** ` : ` **KAPALI** ` }\n**Küfür Engel:** ${db.fetch(`kufurE_${message.guild.id}`) ? ` **AÇIK** ` : ` **KAPALI** ` }`] 
 const ayarReis = new Discord.MessageEmbed() 
 .setColor(0xffd100) 
 .setDescription(sayfa)
