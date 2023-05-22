@@ -10,7 +10,7 @@ const app = express();
 const http = require("http");
 app.get("/", (request, response) => {
   console.log(
-    `ASD :D Creative Developer XD`
+    `Voixy Başladı artık Kullanabilirsiniz`
   );
   response.sendStatus(200);
 });
@@ -122,7 +122,7 @@ const bot = new Discord.Client();
 
 var oyun = [
 `✨ Yardım almak için | !yardım`,
-`🚀 Benim Daha İyi Olmam İçin Hosting Sponsoru Arıyorum | !yardım`,
+`🚀 Benim Daha İyi Olmam İçin Hosting Sponsoru Arıyorum | !sponsor`,
 `🔔 Yenilenen Tasarımı İle`,
 `⚡️ Botu eklemek için | !davet`,
 `🌟 Prefix ayarlamak için | !prefix`
