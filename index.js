@@ -122,7 +122,7 @@ const bot = new Discord.Client();
 
 var oyun = [
 `✨ Yardım almak için | !yardım`,
-`🚀 Benim Daha İyi Olmam İçin Hosting Sponsoru Arıyorum | !sponsor`,
+`🚀 Sponsor Aranır | !sponsor`,
 `🔔 Yenilenen Tasarımı İle`,
 `⚡️ Botu eklemek için | !davet`,
 `🌟 Prefix ayarlamak için | !prefix`
@@ -147,7 +147,7 @@ setInterval(function() {
 
 client.on('message', async msg => {
   let prefix = await db.fetch(`prefix.${msg.guild.id}`) || fynx.prefix 
-  if(msg.content == `<@!713713727794446397>`) return msg.channel.send(`> **Lord Creative | Prefix**\n\n> <:a_:821738957997211659>  **Sanırım beni etiketlediniz.**\n > <:a_:821738957997211659>  Buyurun prefix(ön ek)im \`${prefix}\``);
+  if(msg.content == `<@!1109427651174731917>`) return msg.channel.send(`> **Lord Creative | Prefix**\n\n> <:a_:821738957997211659>  **Sanırım beni etiketlediniz.**\n > <:a_:821738957997211659>  Buyurun prefix(ön ek)im \`${prefix}\``);
 });
 
 
@@ -164,8 +164,8 @@ if (!modlogkanal) return;
   const embed = new Discord.MessageEmbed()
   .setColor("#ffffff")
   .setTitle("MESAJ SİLİNDİ")
-.setDescription(`<:a_:821738957997211659>  <@!${message.author.id}> **adlı kullanıcı tarafından** <#${message.channel.id}> **kanalına gönderilen mesaj silindi!** \n\nSilinen Mesaj: **${message.content}**`)
-  .setFooter("Lord Creative Bot | Log Sistemi")
+.setDescription(`  <@!${message.author.id}> **adlı kullanıcı tarafından** <#${message.channel.id}> **kanalına gönderilen mesaj silindi!** \n\nSilinen Mesaj: **${message.content}**`)
+  .setFooter("Voixy | Log Sistemi")
   modlogkanal.send(embed);
   })
 
@@ -176,9 +176,9 @@ if (!modlogkanal) return;
   const embed = new Discord.MessageEmbed()
   .setColor("#ffffff")
 
-    .setDescription(`<:a_:821738957997211659>  **Üye Sunucudan Yasaklandı!** \n<@!${message.user.id}>, ${message.user.tag}`)
+    .setDescription(`  **Üye Sunucudan Yasaklandı!** \n<@!${message.user.id}>, ${message.user.tag}`)
         .setThumbnail(message.user.avatarURL)
-  .setFooter("Lord Creative Bot | Log Sistemi")
+  .setFooter("Voixy | Log Sistemi")
   modlogkanal.send(embed);
   })
 
@@ -198,8 +198,8 @@ if (!modlogkanal) return;
                 let embed = new Discord.MessageEmbed()
                 .setColor('#ffffff')
 .setTitle("SES KANALI OLUŞTURULDU")
-                .setDescription(`<:a_:821738957997211659>  ${channel.name} **Adlı Ses Kanalı Oluşturuldu!**`)
-                .setFooter(`Lord Creative Bot | Log Sistemi Kanal ID: ${channel.id}`)
+                .setDescription(`  ${channel.name} **Adlı Ses Kanalı Oluşturuldu!**`)
+                .setFooter(`Voixy | Log Sistemi Kanal ID: ${channel.id}`)
 
                 modlogkanal.send({embed});
             }
@@ -212,16 +212,16 @@ if (!modlogkanal) return;
     if (channel.type === "text") {
                 let embed = new Discord.MessageEmbed()
                     .setColor('#ffffff')
-                .setDescription(`<:a_:821738957997211659>  ${channel.name} **Adlın Metin Kanalı  Silindi**`)
-                .setFooter(`Lord Creative Bot | Log Sistemi Kanal ID: ${channel.id}`)
+                .setDescription(`  ${channel.name} **Adlın Metin Kanalı  Silindi**`)
+                .setFooter(`Voixy | Log Sistemi Kanal ID: ${channel.id}`)
                 modlogkanal.send({embed});
             };
             if (channel.type === "voice") {
                 let embed = new Discord.MessageEmbed()
                 .setColor('#ffffff')
 .setTitle("SES KANALI SİLİNDİ")
-                .setDescription(`<:a_:821738957997211659>  ${channel.name} **Adlı Ses Kanalı Silindi**`)
-            .setFooter(`Lord Creative Bot | Log Sistemi  Kanal ID: ${channel.id}`)
+                .setDescription(`  ${channel.name} **Adlı Ses Kanalı Silindi**`)
+            .setFooter(`Voixy | Log Sistemi  Kanal ID: ${channel.id}`)
                 modlogkanal.send({embed});
             }
     })
@@ -255,7 +255,7 @@ client.on("message", async message => {
         if (!message.member.permissions.has('BAN_MEMBERS')) {
           message.delete();
           
-          return message.channel.send(`<:a_:821738957997211659>  **Hey ${message.author} Dur! Bu Sunucuda Küfürü Engelliyorum!**`).then(message => message.delete(3000));
+          return message.channel.send(`  **Hey ${message.author} Dur! Bu Sunucuda Küfürü Engelliyorum!**`).then(message => message.delete(3000));
           
         }
       } catch(err) {
@@ -275,7 +275,7 @@ client.on("messageUpdate", async (newMessage, oldMessage) => {
         if (!newMessage.member.permissions.has('BAN_MEMBERS')) {
          newMessage.delete();
           
-          return newMessage.channel.send(`<:a_:821738957997211659>  **Hey ${newMessage.author} Dur! Bu Sunucuda Küfürü Engelliyorum!**`).then(message => message.delete(3000));
+          return newMessage.channel.send(`  **Hey ${newMessage.author} Dur! Bu Sunucuda Küfürü Engelliyorum!**`).then(message => message.delete(3000));
           
         }
       } catch(err) {
@@ -304,7 +304,7 @@ client.on("message", async message => {
         if (!message.member.permissions.has('BAN_MEMBERS')) {
           message.delete();
           
-          return message.channel.send(`<:a_:821738957997211659>  **Hey ${message.author} Dur! Bu Sunucuda Reklamı Engelliyorum!**`).then(message => message.delete(3000));
+          return message.channel.send(`  **Hey ${message.author} Dur! Bu Sunucuda Reklamı Engelliyorum!**`).then(message => message.delete(3000));
           
         }
       } catch(err) {
@@ -324,7 +324,7 @@ client.on("messageUpdate", async (newMessage, oldMessage) => {
         if (!newMessage.member.permissions.has('BAN_MEMBERS')) {
          newMessage.delete();
           
-          return newMessage.channel.send(`<:a_:821738957997211659>  **Hey ${newMessage.author} Dur! Bu Sunucuda Reklamı Engelliyorum!**`).then(message => message.delete(3000));
+          return newMessage.channel.send(`  **Hey ${newMessage.author} Dur! Bu Sunucuda Reklamı Engelliyorum!**`).then(message => message.delete(3000));
           
         }
       } catch(err) {
@@ -345,7 +345,7 @@ client.on("message", async msg => {
       if (msg.content.toLowerCase() == 'sa' || msg.content.toLowerCase() == 's.a' || msg.content.toLowerCase() == 'selamun aleyküm' || msg.content.toLowerCase() == 'sea' || msg.content.toLowerCase() == 's.a.' || msg.content.toLowerCase() == 'selam' || msg.content.toLowerCase() == 'slm') {
           try {
 
-                  return msg.reply('**<:a_:821738957997211659>  Aleyküm Selam, Hoşgeldin.** ')
+                  return msg.reply('**  Aleyküm Selam, Hoşgeldin.** ')
           } catch(err) {
             console.log(err);
           }
@@ -370,11 +370,11 @@ client.on("guildMemberAdd", async member => {
 
   ///....
   if (!mesaj) {
-    return client.channels.cache.get(kanal).send("<:a_:821738957997211659>  `"+ member.user.username + "`**Adlı Kullanıcı Aramıza Katıldı!** `" + sayaç + "` **Kişi Olmamıza** `" + sonuç + "` **Kişi Kaldı.** `" + member.guild.memberCount + "` **Kişiyiz!**");
+    return client.channels.cache.get(kanal).send("  `"+ member.user.username + "`**Adlı Kullanıcı Aramıza Katıldı!** `" + sayaç + "` **Kişi Olmamıza** `" + sonuç + "` **Kişi Kaldı.** `" + member.guild.memberCount + "` **Kişiyiz!**");
   }
 
   if (member.guild.memberCount == sayaç) {
-    return client.channels.get(kanal).send(`<:a_:821738957997211659>  **Sayaç Sıfırlandı!** \`${member.guild.memberCount}\` **Kişiyiz!**`)
+    return client.channels.get(kanal).send(`  **Sayaç Sıfırlandı!** \`${member.guild.memberCount}\` **Kişiyiz!**`)
     await db.delete(`sayacK_${member.guild.id}`)
     await db.delete(`sayacS_${member.guild.id}`)
     await db.delete(`sayacHG_${member.guild.id}`)
@@ -398,7 +398,7 @@ client.on("guildMemberRemove", async member => {
     ///....
 
   if (!mesaj) {
-    return client.channels.cache.get(kanal).send("<:a_:821738957997211659>  `" + member.user.username + "` **Adlı Kullanıcı Aramızdan Ayrıldı.**`" + sayaç + "` **Kişi Olmamıza** `" + sonuç + "` **Kişi Kaldı.** `" + member.guild.memberCount + "` **Kişiyiz!**");
+    return client.channels.cache.get(kanal).send("  `" + member.user.username + "` **Adlı Kullanıcı Aramızdan Ayrıldı.**`" + sayaç + "` **Kişi Olmamıza** `" + sonuç + "` **Kişi Kaldı.** `" + member.guild.memberCount + "` **Kişiyiz!**");
       }
 
   if (mesaj) {
@@ -415,7 +415,7 @@ client.on("guildMemberAdd", async member => {
   if (!kanal) return;
 
   if (!mesaj) {
-    client.channels.cache.get(kanal).send("<:a_:821738957997211659>  **Selam!** `" + member.user.username + "`**!kayıtol yazarak kayıt olabilirsin!**");
+    client.channels.cache.get(kanal).send("  **Selam!** `" + member.user.username + "`**!kayıtol yazarak kayıt olabilirsin!**");
     
   }
 
@@ -434,7 +434,7 @@ client.on("guildMemberAdd", async member => {
   if (!rol) return;
 
   if (!mesaj) {
-    client.channels.cache.get(kanal).send("<:a_:821738957997211659>  `" + member.user.username + "`** Hoş Geldin! Otomatik Rolün Verildi Seninle Beraber** `" + member.guild.memberCount + "` **Kişiyiz!**");
+    client.channels.cache.get(kanal).send("  `" + member.user.username + "`** Hoş Geldin! Otomatik Rolün Verildi Seninle Beraber** `" + member.guild.memberCount + "` **Kişiyiz!**");
     return member.roles.add(rol);
   }
 
