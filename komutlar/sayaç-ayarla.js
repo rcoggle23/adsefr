@@ -6,20 +6,20 @@ let prefix = await db.fetch(`prefix.${message.guild.id}`) || fynx.prefix
 let kanal = message.mentions.channels.first() 
 let sayı = args[1]
 let kalan = args[1] - message.guild.memberCount
-if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(`<:a_:1109866752428490974>  **Bu komutu kullanabilmek için** "\`Yönetici\`" **yetkisine sahip olmalısın.**`);
+if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(`  **Bu komutu kullanabilmek için** "\`Yönetici\`" **yetkisine sahip olmalısın.**`);
  
- if(!kanal) return message.channel.send(`<:a_:1109866752428490974>   **Lütfen Bir Kanal Belirt!** \n**__Örnek Kullanım__** : \`${prefix}sayaç-ayarla #kanal <Sayı>\``)
+ if(!kanal) return message.channel.send(`   **Lütfen Bir Kanal Belirt!** \n**__Örnek Kullanım__** : \`${prefix}sayaç-ayarla #kanal <Sayı>\``)
   
- if(isNaN(args[1])) return message.channel.send(`<:a_:1109866752428490974>   **Belirttiğin Sayı Çok Küçük Veya O Sayıya Zaten Ulaşmışsın!**\n**__Örnek Kullanım__** : \`${prefix}sayaç-ayarla #kanal <Sayı>\``)
+ if(isNaN(args[1])) return message.channel.send(`   **Belirttiğin Sayı Çok Küçük Veya O Sayıya Zaten Ulaşmışsın!**\n**__Örnek Kullanım__** : \`${prefix}sayaç-ayarla #kanal <Sayı>\``)
  
- if(message.guild.memberCount > args[1]) return message.channel.send(`<:a_:1109866752428490974>   **Belirttiğin Sayı Çok Küçük Veya O Sayıya Zaten Ulaşmışsın!**\n**__Örnek Kullanım__** : \`${prefix}sayaç-ayarla #kanal <Sayı>\``)
+ if(message.guild.memberCount > args[1]) return message.channel.send(`  **Belirttiğin Sayı Çok Küçük Veya O Sayıya Zaten Ulaşmışsın!**\n**__Örnek Kullanım__** : \`${prefix}sayaç-ayarla #kanal <Sayı>\``)
 
  
   message.channel.send(`╔▬▬▬▬▬▬▬▬ Voixy  Sayaç▬▬▬▬▬▬▬▬▬
-║► <:a_:1109866752428490974>  Sayaç Aktif Edildi.
-║► <:a_:1109866752428490974>  **${args[1]}** Olarak Güncelledim! 
-║► <:a_:1109866752428490974>  Kayıt Kanalını **${kanal}** Olarak Güncelledim! 
-║► <:a_:1109866752428490974>  ${args[1]} Kişi Olmaya Son :fire: **${kalan}** :fire: Kişi Kaldı!
+║►  Sayaç Aktif Edildi.
+║►  **${args[1]}** Olarak Güncelledim! 
+║►   Kayıt Kanalını **${kanal}** Olarak Güncelledim! 
+║►   ${args[1]} Kişi Olmaya Son :fire: **${kalan}** :fire: Kişi Kaldı!
 ╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬`)
 
   

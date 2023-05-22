@@ -14,7 +14,7 @@ const hata1 = new Discord.MessageEmbed()
 .setColor(AloneHata) 
 .setTitle("• Hata: 013 •")
 .setThumbnail(`https://drummofficial.com/wp-content/uploads/2017/08/equalizer3.gif`)
-.setDescription(`<:a_:1109866752428490974>  | Şu anda çalan müziği görebilmek için bir ses kanalında olmanız gerekmektedir!`)
+.setDescription(`  | Şu anda çalan müziği görebilmek için bir ses kanalında olmanız gerekmektedir!`)
 .setFooter(`©️ Tüm hakları saklıdır | Yeni Nesil Gelişmiş Bot | 2023`, client.user.avatarURL());  
 if(!message.member.voice.channel) return message.channel.send(hata1)
 
@@ -24,8 +24,8 @@ const hata2 = new Discord.MessageEmbed()
 .setColor(AloneHata) 
 .setTitle("• Hata: 001 •")
 .setThumbnail(`https://drummofficial.com/wp-content/uploads/2017/08/equalizer3.gif`)
-.setDescription(`<:a_:1109866752428490974>   | Şu anda hiçbir müzik çalmamaktadır!`)
-.setFooter(`©️ Tüm hakları saklıdır | Yeni Nesil Gelişmiş Bot | 2020`, client.user.avatarURL());    
+.setDescription(`  | Şu anda hiçbir müzik çalmamaktadır!`)
+.setFooter(`©️ Tüm hakları saklıdır | Yeni Nesil Gelişmiş Bot | 2023`, client.user.avatarURL());    
 if(!client.player.isPlaying(message.guild.id)) return message.channel.send(hata2)
 
 //------------------------------------------------//  
@@ -40,8 +40,8 @@ const calan = await client.player.nowPlaying(message.guild.id);
 const calanembed = new Discord.MessageEmbed()
 .setThumbnail(calan.thumbnail)
 .setColor("#22BF41")
-.setDescription(`<:a_:1109866752428490974>   | Şu Anda Oynatılan:\n\nMüziğin Adı: \n\`${calan.name}\`\n\nMüziği Yükleyen Kanal: \n\`${calan.author}\` \n\nMüziğin Linki: \n[Youtube'den dinlemek için tıkla!](${calan.url})`)
-.setFooter(`©️ Tüm hakları saklıdır | Yeni Nesil Gelişmiş Bot | 2020`, client.user.avatarURL())
+.setDescription(`   | Şu Anda Oynatılan:\n\nMüziğin Adı: \n\`${calan.name}\`\n\nMüziği Yükleyen Kanal: \n\`${calan.author}\` \n\nMüziğin Linki: \n[Youtube'den dinlemek için tıkla!](${calan.url})`)
+.setFooter(`©️ Tüm hakları saklıdır | Yeni Nesil Gelişmiş Bot | 2023`, client.user.avatarURL())
 message.channel.send(calanembed)
 };
 
