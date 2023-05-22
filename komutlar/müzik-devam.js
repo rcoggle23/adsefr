@@ -15,7 +15,7 @@ const hata1 = new Discord.MessageEmbed()
 .setColor(AloneHata) 
 .setTitle("• Hata: 005 •")
 .setThumbnail(`https://drummofficial.com/wp-content/uploads/2017/08/equalizer3.gif`)
-.setDescription(`<:a_:1109866752428490974>   | Oynatılan bir müziği devam ettirebilmek için bir ses kanalında olmanız gerekmektedir!`)
+.setDescription(`  | Oynatılan bir müziği devam ettirebilmek için bir ses kanalında olmanız gerekmektedir!`)
 .setFooter(`©️ Tüm hakları saklıdır | Yeni Nesil Gelişmiş Bot | 2023`, client.user.avatarURL());  
 if(!message.member.voice.channel) return message.channel.send(hata1)
 
@@ -25,8 +25,8 @@ const hata2 = new Discord.MessageEmbed()
 .setColor(AloneHata) 
 .setTitle("• Hata: 001 •")
 .setThumbnail(`https://drummofficial.com/wp-content/uploads/2017/08/equalizer3.gif`)
-.setDescription(`<:a_:1109866752428490974>  | Şu anda hiçbir müzik çalmamaktadır!`)
-.setFooter(`©️ Tüm hakları saklıdır | Yeni Nesil Gelişmiş Bot | 2020`, client.user.avatarURL());    
+.setDescription(`  | Şu anda hiçbir müzik çalmamaktadır!`)
+.setFooter(`©️ Tüm hakları saklıdır | Yeni Nesil Gelişmiş Bot | 2023`, client.user.avatarURL());    
 if(!client.player.isPlaying(message.guild.id)) return message.channel.send(hata2)
 
 //------------------------------------------------//  
@@ -34,10 +34,10 @@ if(!client.player.isPlaying(message.guild.id)) return message.channel.send(hata2
 const sarki = await client.player.resume(message.guild.id);
 const embed = new Discord.MessageEmbed()
 .setColor(AloneDogru)
-.setTitle("Lord Creative | Devam Et")
-.setDescription(`<:a_:1109866752428490974>  | \`${sarki.name}\` adlı müzik ${message.author} tarafından devam ettirildi!`) 
+.setTitle("Voixy | Devam Et")
+.setDescription(`  | \`${sarki.name}\` adlı müzik ${message.author} tarafından devam ettirildi!`) 
 .setThumbnail(`https://drummofficial.com/wp-content/uploads/2017/08/equalizer3.gif`)
-.setFooter(`©️ Tüm hakları saklıdır | Yeni Nesil Gelişmiş Bot | 2020`, client.user.avatarURL())
+.setFooter(`©️ Tüm hakları saklıdır | Yeni Nesil Gelişmiş Bot | 2023`, client.user.avatarURL())
 message.channel.send(embed)
 }
 
