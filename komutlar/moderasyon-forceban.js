@@ -29,8 +29,8 @@ module.exports.run = async (client, message, args) => {
                        message.channel.send(`<@!${user.id}> **adlı kullanıcı banlandı**`);
                    })
                    .catch(error => {
-                       message.channel.send(`:x: Bir Hata Oluştu`);
-                       console.error(':x: Hata:', error);
+                       message.channel.send(` Bir Hata Oluştu`);
+                       console.error(' Hata:', error);
                    });
            });
    } else {

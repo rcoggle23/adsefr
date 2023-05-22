@@ -35,7 +35,7 @@ exports.run = async(client, message, args) => {
   
   const embed2 = new Discord.MessageEmbed()
   .setColor("#ffffff")
-  .setDescription(`<:a_:1109866752428490974>  **Kullanıcı Başarıyla Kicklendi**`)
+  .setDescription(`  **Kullanıcı Başarıyla Kicklendi**`)
   message.channel.send(embed2)
   
 };
