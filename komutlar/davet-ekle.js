@@ -3,7 +3,7 @@ const db = require("quick.db");
 module.exports.run = async (bot, message, args) => {
   let prefix = (await db.fetch(`prefix.${message.guild.id}`)) || "-";
   if (!message.member.hasPermission("ADMINISTRATOR")) {
-  message.channel.send(`<:a_:1109866752428490974>   **Bu komutu kullanabilmek için "\`Yönetici\`" yetkisine sahip olmalısın.**`);
+  message.channel.send(` **Bu komutu kullanabilmek için "\`Yönetici\`" yetkisine sahip olmalısın.**`);
     return;
   }
   let u = message.mentions.users.first();

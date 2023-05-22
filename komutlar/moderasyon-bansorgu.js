@@ -1,16 +1,16 @@
 const Discord = require('discord.js');
 
 exports.run = (client, message, args) => {
-     if (!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send(`<:a_:1109866752428490974>   **Bu komutu kullanabilmek için "\`Üyeleri Yasakla\`" yetkisine sahip olmalısın.**`);
+     if (!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send(`   **Bu komutu kullanabilmek için "\`Üyeleri Yasakla\`" yetkisine sahip olmalısın.**`);
 
-	if (!message.guild) return message.author.send('<:a_:1109866752428490974>  **Bu Komutu Sunucuda Kulanabilirsiniz**');
+	if (!message.guild) return message.author.send(' **Bu Komutu Sunucuda Kulanabilirsiniz**');
 
     let kullanici = args[0];
-    if (!kullanici) return message.channel.send("<:a_:1109866752428490974>  **Banlanan Bir kullanıcının ID'sini belirtmen gerek**")
+    if (!kullanici) return message.channel.send("  **Banlanan Bir kullanıcının ID'sini belirtmen gerek**")
     message.guild.fetchBans()
         .then(bans => {
             if (!bans.has(kullanici)) {
-                return message.channel.send(`<:a_:1109866752428490974>  **Bu kullanıcı banlanmamış.**`)
+                return message.channel.send(`  **Bu kullanıcı banlanmamış.**`)
             }
         })
     message.guild.fetchBan(kullanici).then(({ user, reason }) => {
@@ -18,7 +18,7 @@ exports.run = (client, message, args) => {
 const Embed = new Discord.MessageEmbed()
  .setColor('#ffffff')
 .setAuthor('Voixy  | Ban Sorgulama', client.user.avatarURL())
-.setDescription(`<:a_:1109866752428490974>  ${user.tag} **Adlı Kullanıcının Ban Nedeni:** \n\n**${reason || "Neden Belirtilmemiş"}**`)
+.setDescription(`  ${user.tag} **Adlı Kullanıcının Ban Nedeni:** \n\n**${reason || "Neden Belirtilmemiş"}**`)
 message.channel.send(Embed)
     })
     }

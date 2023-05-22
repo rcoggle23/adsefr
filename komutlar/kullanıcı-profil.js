@@ -16,10 +16,10 @@ exports.run = async (bot, msg, args) => {
         userinfo.id = user.id;
         userinfo.od1 = msg.guild.members.cache.get(user.id).user.presence.game || "Oynadığı bir oyun yok"
         userinfo.status = user.presence.status.toString()
-        .replace("dnd", `<:rahatsizetmeyin:749747908756111420>  | **Rahatsız Etmeyin**`)
-        .replace("online", `<:cevrimici:749747908466966580>  | **Çevrimiçi**`)
-        .replace("idle", `<:bosta:749747908529619105>  | **Boşta**`)
-        .replace("offline", `<:cevrimdisi:749748262717882389>  | **Çevrimdışı**`)
+        .replace("dnd", `  | **Rahatsız Etmeyin**`)
+        .replace("online",` | **Çevrimiçi**`)
+        .replace("idle", ` | **Boşta**`)
+        .replace("offline", ` | **Çevrimdışı**`)
 
         userinfo.bot = user.bot.toString()
         .replace("false", `Hayır`)

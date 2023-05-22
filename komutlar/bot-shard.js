@@ -23,8 +23,8 @@ let i = client.shard.id
     .setImage(`https://geekflare.com/wp-content/uploads/2021/02/discord-bot-hosting-1200x385.jpg`)
     
     for(i=0;i<client.shard.count;i++) {
-        shardembed.addField(`  **Shard ${i}**`, `   **Ping:** ${Math.round(shardinfo.ping[i])}ms\n   **Sunucu:** ${shardinfo.server_count[i]}\n <:a_:>  **Kullanıcı:** ${shardinfo.user_count[i]}\n <:a_:>  **Uptime:** ${moment.duration(shardinfo.uptime[i]).format(`D [Gün] , H [Saat], m [Dakika], s [Saniye]`)} \n <:a_:>  **Bu Sunucunun Shardı Id'si**: ${client.shard.id}`, true)
-    
+        shardembed.addField(`  **Shard ${i}**`, `   **Ping:** ${Math.round(shardinfo.ping[i])}ms\n  **Sunucu:** ${shardinfo.server_count[i]}\n   **Kullanıcı:** ${shardinfo.user_count[i]}\n   **Uptime:** ${moment.duration(shardinfo.uptime[i]).format(`D [Gün] , H [Saat], m [Dakika], s [Saniye]`)} \n   **Bu Sunucunun Shardı Id'si**: ${client.shard.id}`, true)
+    }
     message.channel.send(shardembed)
 }
 exports.config = {

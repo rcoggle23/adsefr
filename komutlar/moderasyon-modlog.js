@@ -2,20 +2,20 @@ const Discord = require('discord.js')
 const db = require('quick.db')
 
 exports.run = async(client, message, args) => {
-  if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(`<:a_:1109866752428490974>  **Bu komutu kullanabilmek için** "\`Yönetici\`" **yetkisine sahip olmalısın.**`);
+  if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(`<:a_:>  **Bu komutu kullanabilmek için** "\`Yönetici\`" **yetkisine sahip olmalısın.**`);
 
 let logk = message.mentions.channels.first();
 let logkanal = await db.fetch(`log_${message.guild.id}`)
   
   if (args[0] === "sıfırla" || args[0] === "kapat") {
-    if(!logkanal) return message.channel.send(`<:a_:1109866752428490974>  **Modlog Kanalı Zaten ayarlı değil**`);
+    if(!logkanal) return message.channel.send(`  **Modlog Kanalı Zaten ayarlı değil**`);
     db.delete(`log_${message.guild.id}`)
-   message.channel.send(`<:a_:1109866752428490974>  **ModLog Kanalı başarıyla sıfırlandı.**`);
+   message.channel.send(`  **ModLog Kanalı başarıyla sıfırlandı.**`);
   
     return
   }
   
-if (!logk) return message.channel.send(`<:a_:1109866752428490974>  **Bir modlog kanalı belirtmelisin.**`);
+if (!logk) return message.channel.send(`  **Bir modlog kanalı belirtmelisin.**`);
 
 db.set(`log_${message.guild.id}`, logk.id)
 

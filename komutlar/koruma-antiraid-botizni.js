@@ -10,7 +10,7 @@ exports.run = (client, message, args) => {
   if (!args[1]) return message.reply("Lütfen bir bot id si girin");
  
   if (isNaN(args[1])) {
-    return message.reply("Sadece ID");
+    return message.reply("1109427651174731917");
   }
   if (args[0] == "ver") {
     client.users.get(args[0]);
