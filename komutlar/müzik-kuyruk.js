@@ -32,8 +32,8 @@ if(!kuyruk) return message.channel.send(hata3)
 
 //------------------------------------------------//    
   
-if(!message.member.voice.channel) return message.channel.send({embed: {color: AloneHata, description: `<:a_:1109866752428490974>  q | Kuyruğu görüntüleyebilmek için bir ses kanalında olmanız gerekmektedir!` }})
-if(!kuyruk) return message.channel.send({embed: {color: AloneHata, description: `<:a_:1109866752428490974>    | Şu anda hiçbir müzik çalmamaktadır!` }})
+if(!message.member.voice.channel) return message.channel.send({embed: {color: AloneHata, description: `  q | Kuyruğu görüntüleyebilmek için bir ses kanalında olmanız gerekmektedir!` }})
+if(!kuyruk) return message.channel.send({embed: {color: AloneHata, description: `   | Şu anda hiçbir müzik çalmamaktadır!` }})
 let q = kuyruk.songs.map((song, i) => {
 return `${i === 0 ? '   | Şu Anda Çalınan Müzik' : `\nKuyruk No: ${i}`} \n**Müziğin Adı:** \`${song.name}\` \n**Müziği Yükleyen Kanal:** \`${song.author}\``
     }).join('\n');  
