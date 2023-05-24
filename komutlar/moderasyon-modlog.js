@@ -20,7 +20,7 @@ if (!logk) return message.channel.send(`  **Bir modlog kanalı belirtmelisin.**`
 db.set(`log_${message.guild.id}`, logk.id)
 
 message.channel.send(`**Mod-Log kanalı başarıyla ${logk} olarak ayarlandı.**`);
- message.react('607634966959882250')
+ message.react('')
 
 };
 
